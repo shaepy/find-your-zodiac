@@ -52,7 +52,8 @@ Last Digit(s) of Year
 - 6, 7:	Fire
 - 8, 9:	Earth
 
-```const simpleElements = {
+```
+const simpleElements = {
   0: "Metal",
   1: "Metal",
   2: "Water",
@@ -67,4 +68,3 @@ Last Digit(s) of Year
 
 const element = simpleElements[year % 10];
 ```
-
