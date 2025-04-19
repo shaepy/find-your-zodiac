@@ -1,16 +1,16 @@
 const animals = [
-    "Rat", // 1
-    "Ox", // 2
-    "Tiger", // 3
-    "Rabbit", // 4
-    "Dragon", // 5
-    "Snake", // 6
-    "Horse", // 7
-    "Goat", // 8
-    "Monkey", // 9
-    "Rooster", // 10
-    "Dog", // 11
-    "Pig" // 12
+    "Rat", 
+    "Ox", 
+    "Tiger", 
+    "Rabbit", 
+    "Dragon",
+    "Snake", 
+    "Horse", 
+    "Goat", 
+    "Monkey", 
+    "Rooster", 
+    "Dog", 
+    "Pig" 
   ]
 
   const elements = {
@@ -37,19 +37,19 @@ const display = document.querySelector('#display')
 // function to find what animal and element, returns as an object
 function findZodiac(year) {
     const animal = animals[(year - 4) % 12]
-    const elementYinYang = elements[year % 10]
-    const element = elementYinYang[0]
-    const yinYang = elementYinYang[1]
+    const elements = elements[year % 10]
+    const element = elements[0]
+    const taijitu = elements[1]
     const zodiac = {}
-
-    console.log(`you are: year of the ${animal}`)
-    console.log(`you are element of ${element}`)
-    console.log(`you are ${yinYang}`)
 
     zodiac.animal = animal
     zodiac.element = element
-    zodiac.yinYang = yinYang
+    zodiac.taijitu = taijitu
     
+    console.log(`you are: year of the ${animal}`)
+    console.log(`you are element of ${element}`)
+    console.log(`your taijitu is ${taijitu}`)
+
     return zodiac
 }
 
@@ -63,7 +63,7 @@ form.addEventListener('submit', function(e) {
     
     if (year) {
         const zodiac = findZodiac(year)
-        display.textContent = `Your Zodiac Animal is ${zodiac.animal} and your Element is ${zodiac.element} (${zodiac.yinYang})`
+        display.textContent = `Your Zodiac Animal is ${zodiac.animal} and your Element is ${zodiac.element} (${zodiac.taijitu})`
         console.log(zodiac) // check object
         
     } else {
