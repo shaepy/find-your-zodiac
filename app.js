@@ -12,7 +12,6 @@ const animals = [
     "Dog", // 11
     "Pig" // 12
   ]
-  console.log(animals)
 
   const elements = {
   0: ["Metal", "Yang"],
@@ -26,7 +25,10 @@ const animals = [
   8: ["Earth", "Yang"],
   9: ["Earth", "Yin"]
 }
+
+// log to check
 console.log(elements)
+console.log(animals)
 
 const submit = document.querySelector('#submit')
 const form = document.querySelector('#form')
@@ -52,8 +54,8 @@ function findZodiac(year) {
 }
 
 // this grabs the value that was entered after pressing submit
-form.addEventListener('submit', function(event) {
-    event.preventDefault()
+form.addEventListener('submit', function(e) {
+    e.preventDefault()
 
     const formdata = new FormData(this)
     const year = Number(formdata.get('year'))
@@ -68,3 +70,5 @@ form.addEventListener('submit', function(event) {
         console.log('this is an empty submission')
     }
 })
+
+// we need to check that the year input is a valid year (must be 4 numbers)
