@@ -13,7 +13,7 @@ const animals = [
     "Pig" 
   ]
 
-  const elements = {
+  const elementsObj = {
   0: ["Metal", "Yang"],
   1: ["Metal", "Yin"],
   2: ["Water", "Yang"],
@@ -27,7 +27,7 @@ const animals = [
 }
 
 // log to check
-console.log(elements)
+console.log(elementsObj)
 console.log(animals)
 
 const submit = document.querySelector('#submit')
@@ -37,7 +37,7 @@ const display = document.querySelector('#display')
 // function to find what animal and element, returns as an object
 function findZodiac(year) {
     const animal = animals[(year - 4) % 12]
-    const elements = elements[year % 10]
+    const elements = elementsObj[year % 10]
     const element = elements[0]
     const taijitu = elements[1]
     const zodiac = {}
@@ -46,29 +46,26 @@ function findZodiac(year) {
     zodiac.element = element
     zodiac.taijitu = taijitu
     
-    console.log(`you are: year of the ${animal}`)
-    console.log(`you are element of ${element}`)
-    console.log(`your taijitu is ${taijitu}`)
-
     return zodiac
 }
 
 // this grabs the value that was entered after pressing submit
 form.addEventListener('submit', function(e) {
     e.preventDefault()
-
     const formdata = new FormData(this)
-    const year = Number(formdata.get('year'))
+    const yearInput = formdata.get('year')
+    const year = Number(yearInput)
+
     console.log('year submitted is:', year) // check
     
-    if (year) {
+    // validate year
+    if (year && yearInput.length === 4) {
         const zodiac = findZodiac(year)
         display.textContent = `Your Zodiac Animal is ${zodiac.animal} and your Element is ${zodiac.element} (${zodiac.taijitu})`
         console.log(zodiac) // check object
-        
-    } else {
-        console.log('this is an empty submission')
+    }
+    else {
+        console.log(`invalid entry: ${yearInput}`)
+        display.textContent = `Please enter a valid 4-digit year.`
     }
 })
-
-// we need to check that the year input is a valid year (must be 4 numbers)
