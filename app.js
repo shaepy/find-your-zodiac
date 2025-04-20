@@ -61,8 +61,8 @@ form.addEventListener('submit', function(e) {
     // validate year
     if (year && yearInput.length === 4) {
         const zodiac = findZodiac(year)
-        display.innerHTML = `<p>Your Zodiac Animal is <strong>${zodiac.animal}</strong><br>
-        and your Element is <strong>${zodiac.element} (${zodiac.taijitu})</strong></p>`
+        display.innerHTML = `<p>Your Zodiac Animal is ${zodiac.animal}<br>
+        and your Element is ${zodiac.element} (${zodiac.taijitu})</p>`
         console.log(zodiac) // check object
     }
     else {
