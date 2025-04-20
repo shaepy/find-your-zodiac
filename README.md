@@ -1,7 +1,15 @@
 # Description
 This simple Zodiac calulcator takes a birth year and returns back the user's Zodiac Animal, Element and Taijitu (Yin or Yang).
 
+Early concept:
+<br>
 <img src="./wip.png" width="500px">
+
+CSS applied:
+<br>
+<img src="./screenshot.png" width="500px">
+
+### Deployment Link: https://shaepy.github.io/find-your-zodiac/
 
 ## 📌 Tech Stack
 - HTML5: structure
