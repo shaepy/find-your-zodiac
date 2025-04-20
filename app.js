@@ -1,29 +1,29 @@
 const animals = [
-    "Rat", 
-    "Ox", 
-    "Tiger", 
-    "Rabbit", 
-    "Dragon",
-    "Snake", 
-    "Horse", 
-    "Goat", 
-    "Monkey", 
-    "Rooster", 
-    "Dog", 
-    "Pig" 
+    "Rat 🐭", 
+    "Ox 🐂", 
+    "Tiger 🐯", 
+    "Rabbit 🐰", 
+    "Dragon 🐲",
+    "Snake 🐍", 
+    "Horse 🐴", 
+    "Goat 🐐", 
+    "Monkey 🐒", 
+    "Rooster 🐓", 
+    "Dog 🐶", 
+    "Pig 🐷" 
   ]
 
   const elementsObj = {
-  0: ["Metal", "Yang"],
-  1: ["Metal", "Yin"],
-  2: ["Water", "Yang"],
-  3: ["Water", "Yin"],
-  4: ["Wood", "Yang"],
-  5: ["Wood", "Yin"],
-  6: ["Fire", "Yang"],
-  7: ["Fire", "Yin"],
-  8: ["Earth", "Yang"],
-  9: ["Earth", "Yin"]
+  0: ["Metal 🔩", "Yang"],
+  1: ["Metal 🔩", "Yin"],
+  2: ["Water 🌊", "Yang"],
+  3: ["Water 🌊", "Yin"],
+  4: ["Wood 🪵", "Yang"],
+  5: ["Wood 🪵", "Yin"],
+  6: ["Fire 🔥", "Yang"],
+  7: ["Fire 🔥", "Yin"],
+  8: ["Earth 🌎", "Yang"],
+  9: ["Earth 🌎", "Yin"]
 }
 
 // log to check
