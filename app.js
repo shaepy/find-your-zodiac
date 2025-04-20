@@ -29,10 +29,13 @@ const animals = [
 // log to check
 console.log(elementsObj)
 console.log(animals)
-
+// html references
 const submit = document.querySelector('#submit')
 const form = document.querySelector('#form')
 const display = document.querySelector('#display')
+const yearInputField = document.querySelector('input[name="year"]')
+// zodiac object
+const zodiac = {}
 
 // function to find what animal and element, returns as an object
 function findZodiac(year) {
@@ -40,13 +43,10 @@ function findZodiac(year) {
     const elements = elementsObj[year % 10]
     const element = elements[0]
     const taijitu = elements[1]
-    const zodiac = {}
 
     zodiac.animal = animal
     zodiac.element = element
     zodiac.taijitu = taijitu
-    
-    return zodiac
 }
 
 // this grabs the value that was entered after pressing submit
@@ -60,13 +60,25 @@ form.addEventListener('submit', function(e) {
     
     // validate year
     if (year && yearInput.length === 4) {
-        const zodiac = findZodiac(year)
-        display.innerHTML = `<p>Your Zodiac Animal is ${zodiac.animal}<br>
-        and your Element is ${zodiac.element} (${zodiac.taijitu})</p>`
+        findZodiac(year)
+        display.innerHTML = `
+        <p>
+        Your Zodiac Animal is ${zodiac.animal}
+        <br>
+        and your Element is ${zodiac.element} (${zodiac.taijitu})
+        </p>
+        `
         console.log(zodiac) // check object
     }
     else {
         console.log(`invalid entry: ${yearInput}`)
         display.textContent = `Please enter a valid 4-digit year.`
+        form.reset()
     }
+})
+
+// clear the result when user interacts with year field again
+yearInputField.addEventListener('input', () => {
+  display.textContent = ''
+  console.log('clearing display')
 })
