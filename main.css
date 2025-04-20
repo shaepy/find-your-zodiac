@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 253, 206);
+    font-family: system-ui, sans-serif;
+    /* Ensures full height compatibility across devices */
+    min-height: 100dvh;
+  }
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+input[type=text] {
+    padding: 10px 0px;
+    max-width: 150px;
+    font-size: 16px;
+    text-align: center;
+}
+
+input[type=text]:focus {
+    border: 1px solid #555;
+}
+
+input[type=submit] {
+    padding: 6px 15px;
+}
+    
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
