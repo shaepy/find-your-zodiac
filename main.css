@@ -5,10 +5,11 @@
 }
 
 body {
-    background-color: rgb(255, 253, 243);
+    background-color: rgb(255, 255, 255);
     font-family: system-ui, sans-serif;
     /* Ensures full height compatibility across devices */
     min-height: 100dvh;
+    letter-spacing: .078rem;
   }
 
 #content {
@@ -20,23 +21,25 @@ body {
     margin-top: 30px;
 }
 
-#content p {
-    font-size: 18px;
+p {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 32px;
 }
 
 input[type=text] {
+    font-family: system-ui, sans-serif;
+    letter-spacing: .1rem;
     padding: 10px 0px;
     max-width: 150px;
     font-size: 16px;
     text-align: center;
 }
 
-input[type=text]:focus {
-    padding: 10px 0px;
-    border: 1px solid #555;
-}
-
 input[type=submit] {
+    font-family: system-ui, sans-serif;
     padding: 6px 15px;
 }
     
