@@ -26,19 +26,15 @@ const animals = [
   9: ["Earth 🌎", "Yin"]
 }
 
-// log to check
-console.log(elementsObj)
-console.log(animals)
-
-// html references
+// HTML element references
 const submit = document.querySelector('#submit')
 const form = document.querySelector('#form')
 const display = document.querySelector('#display')
 const yearInputField = document.querySelector('input[name="year"]')
-// zodiac object
+
 const zodiac = {}
 
-// function to find what animal and element, returns as an object
+// This finds what animal, element, and taijitu. Returns as an object
 function findZodiac(year) {
     const animal = animals[(year - 4) % 12]
     const elements = elementsObj[year % 10]
@@ -50,16 +46,14 @@ function findZodiac(year) {
     zodiac.taijitu = taijitu
 }
 
-// this grabs the value that was entered after pressing submit
+// This grabs the value that was entered after pressing submit
 form.addEventListener('submit', function(e) {
     e.preventDefault()
     const formdata = new FormData(this)
     const yearInput = formdata.get('year')
     const year = Number(yearInput)
-
-    console.log('year submitted is:', year) // check
     
-    // validate year
+    // This check validates the year value
     if (year && yearInput.length === 4) {
         findZodiac(year)
         display.innerHTML = `
@@ -69,7 +63,6 @@ form.addEventListener('submit', function(e) {
         and your Element is ${zodiac.element} (${zodiac.taijitu})
         </p>
         `
-        console.log(zodiac) // check object
     }
     else {
         console.log(`invalid entry: ${yearInput}`)
@@ -78,8 +71,10 @@ form.addEventListener('submit', function(e) {
     }
 })
 
-// clear the result when user interacts with year field again
+// This clears the result when the user interacts with year field again
 yearInputField.addEventListener('input', () => {
   display.textContent = ''
   console.log('clearing display')
 })
+
+// Next: Separate rendering and displaying the result into its own function
