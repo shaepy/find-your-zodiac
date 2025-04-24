@@ -29,6 +29,7 @@ const animals = [
 // log to check
 console.log(elementsObj)
 console.log(animals)
+
 // html references
 const submit = document.querySelector('#submit')
 const form = document.querySelector('#form')
