@@ -1,11 +1,11 @@
-# Description
-This simple Zodiac calulcator takes a birth year and returns back the user's Zodiac Animal, Element and Taijitu (Yin or Yang).
+# 🐲 Zodiac Finder
+This simple Chinese Zodiac finder takes a birth year and returns back the user's Zodiac Animal, Element and Taijitu (Yin or Yang).
 
 <img src="./screenshots/screenshot.png" width="500px">
 
-### Deployment Link: https://shaepy.github.io/find-your-zodiac/
+### Deployment 🔗 https://shaepy.github.io/find-your-zodiac/
 
-## 📌  Tech Stack
+## 📌 Tech Stack
 - HTML5: structure
 - CSS3: styling and responsive layout
 - JavaScript (Vanilla): logic and interactivity
