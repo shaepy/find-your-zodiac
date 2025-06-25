@@ -1,5 +1,5 @@
 # 🐲 Zodiac Finder
-This simple Chinese Zodiac finder takes a birth year and returns back the user's Zodiac Animal, Element and Taijitu (Yin or Yang).
+This simple Chinese Zodiac finder takes a birth year and returns back the user's Zodiac Animal, Element and Taijitu (Yin or Yang). A fun project I did in 24 hours out of curiousity.
 
 <img src="./screenshots/screenshot.png" width="500px">
 
